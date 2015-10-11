@@ -73,6 +73,7 @@ public class OpenPathsBinding extends
 	protected long getRefreshInterval() {
 		return refreshInterval;
 	}
+<<<<<<< Updated upstream
 
 	public Map<String, OpenPathsBinding.Location> getLocations() {
 		return this.locations;
@@ -84,6 +85,19 @@ public class OpenPathsBinding extends
 
 	enum LocationBindingType {
 		on, distance
+=======
+	
+	protected Map<String, OpenPathsBinding.Location> getLocations() {
+	    return this.locations;
+	}
+	
+	protected Map<String, OpenPathsBinding.OpenPathsUser> getUsers() {
+	    return this.openPathsUsers;
+	}
+	
+	protected enum LocationBindingType {
+	    on, distance
+>>>>>>> Stashed changes
 	}
 
 	/**
@@ -426,8 +440,13 @@ public class OpenPathsBinding extends
 			setProperlyConfigured(true);
 		}
 	}
+<<<<<<< Updated upstream
 
 	public class OpenPathsUser {
+=======
+		
+	class OpenPathsUser {
+>>>>>>> Stashed changes
 		private final String name;
 		private String accessKey;
 		private String secretKey;
@@ -480,8 +499,13 @@ public class OpenPathsBinding extends
 			return out.toString();
 		}
 	}
+<<<<<<< Updated upstream
 
 	public class Location {
+=======
+	
+	class Location {
+>>>>>>> Stashed changes
 		private float latitude;
 		private float longitude;
 		private float geofence;
