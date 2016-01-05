@@ -166,7 +166,8 @@ public class JdbcConfiguration {
 
         String np = (String) configuration.get("tableNamePrefix");
         if (StringUtils.isNotBlank(np)) {
-            dBDAO.databaseProps.setProperty("tableNamePrefix", np);
+	    tableNamePrefix = np;
+	    logger.debug("JDBC::updateConfig: tableNamePrefix={}", tableNamePrefix);
         }
 
         String dd = (String) configuration.get("numberDecimalcount");
@@ -258,7 +259,7 @@ public class JdbcConfiguration {
             else if (serviceName.equals("postgresql"))
                 warn += "\tPostgreSQL:version >= 9.4-1201-jdbc41 from    http://mvnrepository.com/artifact/org.postgresql/postgresql\n";
             else if (serviceName.equals("sqlite"))
-                warn += "\tSQLite:    version >= 3.8.11.1 from           http://mvnrepository.com/artifact/org.xerial/sqlite-jdbc\n";
+                warn += "\tSQLite:    version >= 3.8.11.2 from           http://mvnrepository.com/artifact/org.xerial/sqlite-jdbc\n";
             logger.warn(warn, serviceName);
         }
 
